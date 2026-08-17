@@ -1,65 +1,63 @@
-'use client'
-export default function Home(){
+export default function Page() {
   return (
-    <div className="min-h-screen bg-white text-black font-sans">
-      {/* NAV */}
-      <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto">
-        <div className="flex items-center gap-2">
-          <div className="bg-black text-white w-8 h-8 rounded flex items-center justify-center">⊞</div>
-          <div><b>FieldOps Pro</b><span className="text-[10px] block -mt-1 tracking-widest opacity-60">UNIVERSAL</span></div>
+    <div className="min-h-screen bg-white text-zinc-900 antialiased">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-100">
+        <div className="mx-auto max-w-[1240px] px-6 h-[64px] flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-[8px] bg-black text-white flex items-center justify-center font-bold">⊞</div>
+            <span className="font-black text-[17px]">FieldOps Pro</span>
+            <span className="text-[10px] font-semibold tracking-[0.18em] text-zinc-400">UNIVERSAL</span>
+          </div>
+          <nav className="hidden lg:flex gap-7 text-[13.5px] text-zinc-600">
+            <a href="#">Funcionalidades</a><a href="#precos">Preços</a><a href="#">Documentação</a>
+          </nav>
+          <div className="flex items-center gap-3">
+            <a href="#" className="text-[13.5px] font-medium">Entrar</a>
+            <a href="#precos" className="rounded-full bg-black text-white text-[13.5px] font-semibold px-5 h-9 flex items-center">Começar teste grátis</a>
+          </div>
         </div>
-        <div className="hidden md:flex gap-8 text-sm opacity-70">
-          <span>Funcionalidades</span><span>Preços</span><span>Documentação</span>
-        </div>
-        <div className="flex gap-4 items-center">
-          <span className="text-sm">Entrar</span>
-          <a href="/planos" className="bg-black text-white px-5 py-2 rounded-full text-sm">Começar teste grátis</a>
-        </div>
-      </nav>
+      </header>
 
-      {/* HERO - Igual sua foto */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 p-6 mt-10">
+      <section className="mx-auto max-w-[1240px] px-6 pt-16 pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 border rounded-full px-3 py-1 text-xs">
-            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-            Inspirado em operações reais de campo <span className="bg-black text-white px-2 py-0.5 rounded-full">V2.4</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-3 py-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" /> <span className="text-[12px]">Inspirado em operações reais de campo</span> <span className="bg-black text-white text-[10px] px-2 py-0.5 rounded-full font-bold">V2.4</span>
           </div>
-          <h1 className="text-5xl font-black mt-6 leading-[1.1]">Sua operação de campo,<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">sob controle total.</span></h1>
-          <p className="mt-6 text-gray-600">Plataforma completa para gestão de equipes externas, estoque com baixa automática, indicadores MTTR/MTBF, PMOC e certificados com QR Code. <b>Teste grátis 7 dias com tudo do Pro liberado.</b></p>
-          <div className="flex gap-4 mt-8">
-            <a href="/planos" className="bg-black text-white px-6 py-3 rounded-full text-sm">Começar teste grátis 7 dias →</a>
-            <button className="border px-6 py-3 rounded-full text-sm flex items-center gap-2">▶ Ver demonstração</button>
+          <h1 className="mt-6 text-[56px] font-black tracking-[-0.05em] leading-[0.9]">Sua operação de campo,<br/><span className="bg-gradient-to-r from-teal-400 to-blue-600 bg-clip-text text-transparent">sob controle total.</span></h1>
+          <p className="mt-5 text-[15.5px] text-zinc-500 max-w-[480px]">Plataforma completa para gestão de equipes externas, estoque com baixa automática, indicadores MTTR/MTBF, PMOC e QR Code. <span className="font-semibold text-zinc-900">Teste grátis 7 dias com tudo do Pro liberado.</span></p>
+          <div className="mt-7 flex gap-3">
+            <a href="#precos" className="rounded-full bg-black text-white px-6 h-11 flex items-center gap-2 text-[14px] font-semibold">Começar teste grátis 7 dias →</a>
+            <button className="rounded-full border border-zinc-200 px-5 h-11 text-[14px] font-semibold">▶ Ver demonstração</button>
           </div>
-          <div className="mt-10 flex items-center gap-3 text-xs">
-            <div className="flex -space-x-2"><img src="https://i.pravatar.cc/24?img=1" className="rounded-full"/><img src="https://i.pravatar.cc/24?img=2" className="rounded-full"/><img src="https://i.pravatar.cc/24?img=3" className="rounded-full"/></div>
-            <div><b>+340 empresas ativas</b><br/>4.9/5 em satisfação • Sem cartão</div>
+          <div className="mt-8 flex items-center gap-4 text-[12.5px]">
+            <div className="flex -space-x-2"><div className="w-8 h-8 rounded-full bg-zinc-300 border-2 border-white"/><div className="w-8 h-8 rounded-full bg-zinc-400 border-2 border-white"/><div className="w-8 h-8 rounded-full bg-zinc-500 border-2 border-white"/></div>
+            <div><div className="font-semibold">+340 empresas ativas</div><div className="text-zinc-500">4.9/5 em satisfação • Sem cartão</div></div>
           </div>
         </div>
-
-        {/* DASHBOARD MOCK - Igual sua foto */}
-        <div className="bg-white border rounded-[20px] shadow-2xl overflow-hidden">
-          <div className="bg-[#1a1f2e] text-white text-xs p-3 flex justify-between">
-            <span>●●● fieldops.pro/app <span className="bg-teal-500 px-2 rounded-full text-[10px]">LIVE</span></span>
-            <span className="opacity-60">8 técnicos em rota ao vivo</span>
-          </div>
-          <div className="p-4 grid grid-cols-3 gap-3 text-xs">
-            <div className="bg-orange-50 p-3 rounded-xl"><div className="text-orange-600 font-bold">ABERTAS 12</div><div className="mt-2 border p-2 rounded bg-white">#OS-2841 Preventiva Split 24k<br/><span className="opacity-60">Torre A - 3º andar</span></div></div>
-            <div className="bg-blue-50 p-3 rounded-xl"><div className="text-blue-600 font-bold">EM CAMPO 8</div><div className="mt-2 border p-2 rounded bg-white">#OS-2832 Instalação PMOC <span className="text-blue-500">AO VIVO</span></div></div>
-            <div className="bg-green-50 p-3 rounded-xl"><div className="text-green-700 font-bold">CONCLUÍDAS 23</div><div className="mt-2 border p-2 rounded bg-white">#OS-2829 Limpeza bandeja</div></div>
+        <div className="rounded-[20px] bg-white border border-zinc-200 shadow-[0_24px_80px_rgba(0,0,0,0.12)] overflow-hidden">
+          <div className="h-[52px] bg-[#111113] px-5 flex items-center justify-between"><span className="text-[12px] font-mono text-zinc-300">fieldops.pro/app LIVE • 8 técnicos</span></div>
+          <div className="p-4 grid grid-cols-3 gap-3">
+            <div className="bg-orange-50 p-3 rounded-xl"><div className="text-orange-700 font-bold text-xs">ABERTAS 12</div><div className="mt-2 bg-white border rounded-lg p-2 text-xs">#OS-2841 Preventiva Split</div></div>
+            <div className="bg-blue-50 p-3 rounded-xl"><div className="text-blue-700 font-bold text-xs">EM CAMPO 8</div><div className="mt-2 bg-white border rounded-lg p-2 text-xs">#OS-2832 PMOC AO VIVO</div></div>
+            <div className="bg-green-50 p-3 rounded-xl"><div className="text-green-700 font-bold text-xs">CONCLUÍDAS 23</div><div className="mt-2 bg-white border rounded-lg p-2 text-xs">#OS-2829 Limpeza</div></div>
           </div>
           <div className="p-4 grid grid-cols-2 gap-3">
-            <div className="border rounded-xl p-3"><div className="text-[10px] flex justify-between">MTTR HOJE <span className="text-green-600">↓ -18%</span></div><div className="font-bold text-xl">1h 42m <span className="text-xs font-normal opacity-60">meta 2h</span></div></div>
-            <div className="bg-[#1a1f2e] text-white rounded-xl p-3 text-xs"><div className="flex justify-between">EQUIPE ATIVA <span>✎</span></div><div className="mt-2">+4 em deslocamento</div></div>
+            <div className="border rounded-xl p-3"><div className="text-[10px]">MTTR HOJE</div><div className="font-bold text-xl">1h 42m</div><div className="h-1 bg-zinc-100 rounded mt-2"><div className="h-1 bg-black w-[75%] rounded"></div></div></div>
+            <div className="bg-[#1a1f2e] text-white rounded-xl p-3 text-xs">EQUIPE ATIVA<br/>+4 em deslocamento</div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* PREÇOS - Com R$597 */}
-      <div id="precos" className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 p-6 mt-20">
-        <div className="border rounded-2xl p-6"><h3>BÁSICO</h3><div className="text-3xl font-bold mt-2">R$97/mês</div><ul className="mt-4 text-sm opacity-70"><li>✅ Até 5 técnicos</li><li>✅ OS ilimitadas</li></ul></div>
-        <div className="border-2 border-black rounded-2xl p-6 relative"><span className="absolute -top-3 bg-black text-white text-xs px-3 py-1 rounded-full left-1/2 -translate-x-1/2">MAIS VENDIDO</span><h3>PRO</h3><div className="text-3xl font-bold mt-2">R$197/mês</div><ul className="mt-4 text-sm opacity-70"><li>✅ Até 15 técnicos</li><li>✅ Relatórios + QR Code</li></ul></div>
-        <div className="border rounded-2xl p-6 bg-gray-50"><h3>ENTERPRISE</h3><div className="text-3xl font-bold mt-2">R$597/mês</div><p className="text-xs mt-1 text-amber-600 font-bold">+ SISTEMA DE LOCAÇÃO COMPLETO</p><ul className="mt-4 text-sm opacity-70"><li>✅ Técnicos ilimitados</li><li>✅ Locação de Equipamentos</li><li>✅ API + Filiais</li></ul></div>
-      </div>
+      <section id="precos" className="bg-zinc-50 py-20 border-t">
+        <div className="mx-auto max-w-[1240px] px-6">
+          <div className="text-center"><h2 className="text-3xl font-black">Planos para cada operação</h2><p className="text-zinc-500 mt-2">Comece grátis 7 dias, sem cartão. Cancele em 1 clique.</p></div>
+          <div className="mt-10 grid lg:grid-cols-3 gap-6 max-w-[1040px] mx-auto">
+            <div className="rounded-[20px] bg-white border p-7"><span className="text-[11px] font-bold tracking-widest text-zinc-500">BÁSICO</span><div className="mt-5 text-[42px] font-black">R$97<span className="text-sm font-normal text-zinc-500">/mês</span></div><div className="mt-6 text-[13px]">✅ Até 5 técnicos<br/>✅ OS ilimitadas</div></div>
+            <div className="rounded-[20px] bg-white border-[1.5px] border-zinc-900 p-7 shadow-xl relative"><div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full">MAIS VENDIDO</div><span className="text-[11px] font-bold">PRO</span><div className="mt-5 text-[42px] font-black">R$197<span className="text-sm font-normal">/mês</span></div><div className="mt-6 text-[13px] font-medium">✅ 15 técnicos<br/>✅ MTTR/MTBF + QR Code<br/>✅ WhatsApp + GPS</div><a href="/locacoes" className="mt-8 block w-full rounded-full bg-black text-white h-11 flex items-center justify-center text-[13px] font-semibold">Começar teste grátis</a></div>
+            <div className="rounded-[20px] bg-white border border-amber-200 p-7"><span className="text-[11px] font-bold text-amber-700">ENTERPRISE</span><span className="ml-2 bg-amber-100 text-amber-800 text-[9px] px-2 py-1 rounded-full font-bold">LOCAÇÃO COMPLETO</span><div className="mt-5 text-[42px] font-black">R$597<span className="text-sm font-normal">/mês</span></div><div className="mt-6 text-[13px]">✅ Tudo do PRO<br/>✅ <b>Locação de Equipamentos</b><br/>✅ API + Filiais<br/>✅ NF-e + Financeiro</div><a href="/locacoes" className="mt-8 block w-full rounded-full bg-amber-100 border border-amber-300 h-11 flex items-center justify-center text-[13px] font-semibold text-amber-900">Ver Módulo Locação →</a></div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
