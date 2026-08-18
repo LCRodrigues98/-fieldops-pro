@@ -18,8 +18,8 @@ export async function POST(req) {
       items: [{ title: selected.title, quantity: 1, unit_price: selected.price, currency_id: "BRL" }],
       back_urls: {
         success: "https://fieldops-pro-five.vercel.app/obrigado",
-        failure: "https://fieldops-pro-five.vercel.app/",
-        pending: "https://fieldops-pro-five.vercel.app/",
+        failure: "https://fieldops-pro-five.vercel.app/obrigado",
+        pending: "https://fieldops-pro-five.vercel.app/obrigado",
       },
       auto_return: "approved",
     }),
